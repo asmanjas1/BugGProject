@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PracticeApp</string>
+    <string name="radio_ShopKeeper">ShopKeeper</string>
+    <string name="radio_Consumer">Consumer</string>
+    <string name="create_account">Create Account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
