@@ -1,8 +1,9 @@
 package com.beans;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Order {
+public class Order implements Serializable{
     /*private int orderImage;*/
     private Integer orderId;
     private ConsumerBean consumerBean;
