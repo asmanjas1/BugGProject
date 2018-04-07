@@ -10,6 +10,7 @@ import com.practiceapp.R;
 import com.practiceapp.ShopActivity;
 
 public class ShopTwoFragment extends Fragment {
+
     public static ShopTwoFragment newInstance() {
         ShopTwoFragment fragment = new ShopTwoFragment();
         return fragment;
@@ -24,6 +25,9 @@ public class ShopTwoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ((ShopActivity) getActivity()).setActionBarTitle("Profile");
-        return inflater.inflate(R.layout.fragment_shop_2, container, false);
+        View view = inflater.inflate(R.layout.fragment_shop_2, container, false);
+        return view;
     }
+
+
 }

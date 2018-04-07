@@ -5,7 +5,6 @@ import java.sql.Blob;
 public class ConsumerBean {
     private String UserName;
     private String emailID;
-    private byte[] profileImage;
     private Integer phoneNo;
     private AddressBean address;
 
@@ -23,14 +22,6 @@ public class ConsumerBean {
 
     public void setEmailID(String emailID) {
         this.emailID = emailID;
-    }
-
-    public byte[] getProfileImage() {
-        return profileImage;
-    }
-
-    public void setProfileImage(byte[] profileImage) {
-        this.profileImage = profileImage;
     }
 
     public Integer getPhoneNo() {
