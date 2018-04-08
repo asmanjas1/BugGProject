@@ -46,7 +46,7 @@ public class SaveSharedPreference {
     }
 
     public static ShopkeeperBean getShopkeeperObjectValue(Context ctx){
-        ShopkeeperBean bean = new ShopkeeperBean();
+        ShopkeeperBean bean = new ShopkeeperBean(null,null,null,null,null,null);
         String json = getSharedPreferences(ctx).getString(BuyGConstants.SHOPKEEPER_BEAN,"");
         bean = gson.fromJson(json,ShopkeeperBean.class);
         return bean;

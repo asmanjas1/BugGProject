@@ -1,6 +1,7 @@
 package com.resources;
 
 import com.beans.Country;
+import com.beans.ShopkeeperBean;
 
 import java.util.List;
 
@@ -11,5 +12,8 @@ public interface RestInvokerService {
 
     @GET("data")
     Call<List<Country>> getTopRatedMovies();
+
+    @GET("getShopkeeperList")
+    Call<List<ShopkeeperBean>> getShopkeeperList();
 
 }

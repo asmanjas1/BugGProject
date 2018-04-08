@@ -6,30 +6,19 @@ import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.beans.Country;
 import com.beans.Order;
 import com.practiceapp.ConsumerActivity;
 import com.practiceapp.R;
 import com.resources.BuyGUtils;
 import com.resources.DummyResponseResultFromRest;
-import com.resources.RestClient;
-import com.resources.RestInvokerService;
 import com.viewAdapter.ConsumerOrderAdapter;
-import com.viewAdapter.ShopkeeperOrderAdapter;
 
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class ConsumerTwoFragment extends Fragment {
     //a list to store all the products
@@ -56,12 +45,11 @@ public class ConsumerTwoFragment extends Fragment {
                              Bundle savedInstanceState) {
         ((ConsumerActivity) getActivity()).setActionBarTitle("Your Orders");
         View view = inflater.inflate(R.layout.fragment_consumer_2, container, false);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewForConsumer);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewForConsumerOrder);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         loadOrderItems();
-       /* textView = (TextView) view.findViewById(R.id.resttext);
-        RestInvokerService restInvokerService = RestClient.getClient().create(RestInvokerService.class);
+       /*RestInvokerService restInvokerService = RestClient.getClient().create(RestInvokerService.class);
         Call<List<Country>> call = restInvokerService.getTopRatedMovies();
         call.enqueue(new Callback<List<Country>>() {
             @Override
@@ -97,7 +85,7 @@ public class ConsumerTwoFragment extends Fragment {
                     Toast.makeText(getContext(),"Not able to fetch Order List",Toast.LENGTH_SHORT).show();
                 }
             }
-        }, 1000);
+        }, 100);
 
 
 

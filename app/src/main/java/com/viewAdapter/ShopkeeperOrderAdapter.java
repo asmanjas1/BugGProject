@@ -47,7 +47,7 @@ public class ShopkeeperOrderAdapter extends RecyclerView.Adapter<ShopkeeperOrder
     public OrderViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.generalorderlayoutforshopkeeper, null);
+        View view = inflater.inflate(R.layout.generalorderlayoutforshopkeeper,parent, false);
         return new OrderViewHolder(view);
        /* View itemView = LayoutInflater.from(parent.getContext()).
                 inflate(R.layout.generalorderlayoutforshopkeeper, parent, false);

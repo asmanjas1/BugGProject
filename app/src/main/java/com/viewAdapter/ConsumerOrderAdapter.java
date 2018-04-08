@@ -1,7 +1,5 @@
 package com.viewAdapter;
 
-
-import android.app.Activity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
@@ -12,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.beans.Order;
 import com.consumer_fragments.ConsumerCommonOrderFragment;
@@ -44,7 +41,7 @@ public class ConsumerOrderAdapter extends RecyclerView.Adapter<ConsumerOrderAdap
     public ConsumerOrderAdapter.OrderViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.generalorderlayoutforconsumer, null);
+        View view = inflater.inflate(R.layout.generalorderlayoutforconsumer, parent,false);
         return new ConsumerOrderAdapter.OrderViewHolder(view);
        /* View itemView = LayoutInflater.from(parent.getContext()).
                 inflate(R.layout.generalorderlayoutforshopkeeper, parent, false);
@@ -52,12 +49,10 @@ public class ConsumerOrderAdapter extends RecyclerView.Adapter<ConsumerOrderAdap
         return new OrderViewHolder(itemView);*/
     }
 
-
     @Override
     public int getItemCount() {
         return orderList.size();
     }
-
 
     class OrderViewHolder extends RecyclerView.ViewHolder {
 
@@ -95,7 +90,6 @@ public class ConsumerOrderAdapter extends RecyclerView.Adapter<ConsumerOrderAdap
             textViewOrderDate.setText(String.valueOf(order.getOrderDate().getTime()));
             textViewOrderAmount.setText(String.valueOf(order.getOrderAmount()));
             /*imageView.setImageDrawable(mCtx.getResources().getDrawable(Order.getImage()));*/
-
         }
     }
 }
